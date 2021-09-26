@@ -10,7 +10,7 @@ function App() {
   const [source, setSource] = useState("")
   const [input, setInput] = useState("")
   const [language, setLanguage] = useState("c++")
-  const [running, setRunning] = useState(false)
+  const [isRunning, setRunning] = useState(false)
   const [outputData, setOutputData] = useState({})
 
   const allLanguages = {
@@ -36,7 +36,7 @@ function App() {
   const inputChanged = (event) => {
     setInput(event.target.value)
     console.log("input updated.")
-  } 
+  }
 
   const languageChanged = (language) => {
     setLanguage(language.value)
@@ -44,16 +44,17 @@ function App() {
   }
 
   async function run() {
+    setRunning(true)
     const sourceFile = new File([source],`source.${allLanguages[language].extension}`,{type: "text/plain"})
     const inputFile = new File([input],'input.txt',{type: "text/plain"})
     const outputData = await runCode(language, sourceFile, inputFile)
     setOutputData(outputData)
-    console.log("run envoked.",sourceFile,inputFile,language)
+    setRunning(false)
   }
 
   return (
     <div className="App">
-      <NavBar languageChanged={languageChanged} run={run} languages={Object.keys(allLanguages)}></NavBar>
+      <NavBar languageChanged={languageChanged} run={run} languages={Object.keys(allLanguages)} isRunning={isRunning}></NavBar>
       <div className="container">
         <Editor sourceChanged={sourceChanged} language={allLanguages[language].aceName}></Editor>
         <Input inputChanged={inputChanged}></Input>
