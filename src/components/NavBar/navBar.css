@@ -33,11 +33,11 @@ div.lang-dropdown-menu {
 
 .run-button {
     margin-left: 20px;
-    padding: 7px 20px;
-    color: white;
+    padding: 10px 30px;
+    color: black;
     background-color: rgb(6, 172, 6);
     border-radius: 5px;
-    margin-right: 33%;
+    margin-right: 30px;
 }
 
 .loader {
@@ -51,7 +51,7 @@ div.lang-dropdown-menu {
     -webkit-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
     margin-left: 20px;
-    margin-right: 33%;
+    margin-right: 30px;
 }
   
 @-webkit-keyframes spin {

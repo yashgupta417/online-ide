@@ -19,6 +19,7 @@ export async function runCode(language, sourceFile, inputFile) {
       method: "POST",
       data: formdata,
       headers: headers,
+      timeout: 10000,
     }
     console.log("Going to send request....", reqOptions)
     const res = await axios(reqOptions)
