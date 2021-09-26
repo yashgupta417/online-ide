@@ -1,5 +1,5 @@
 import axios from "axios";
-const BASE_URL = "http://onlinejudge-env.eba-n3rv32mp.us-east-1.elasticbeanstalk.com/api"
+const BASE_URL = "https://onlinejudge-env.eba-n3rv32mp.us-east-1.elasticbeanstalk.com/api"
 const JUDGE_API_URL = `${BASE_URL}/judge`
 
 export async function runCode(language, sourceFile, inputFile) {    
