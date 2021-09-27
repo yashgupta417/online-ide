@@ -2,15 +2,16 @@ import { useEffect } from 'react';
 import './editor.css'
 
 function Editor(props) {
+    const sourceChanged = props.sourceChanged
     useEffect(() => {
         let editor = window.ace.edit("editor");
         editor.setTheme("ace/theme/clouds_midnight");
         editor.setHighlightActiveLine(false)
         editor.setValue("")
         editor.session.on('change',(delta) => {
-            props.sourceChanged(editor.getValue())
+            sourceChanged(editor.getValue())
         })
-      }, [props.sourceChanged])
+      }, [sourceChanged])
 
     useEffect(() => {
         let editor = window.ace.edit("editor");
