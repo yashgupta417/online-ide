@@ -10,7 +10,7 @@ function Editor(props) {
         editor.session.on('change',(delta) => {
             props.sourceChanged(editor.getValue())
         })
-      }, [])
+      }, [props.sourceChanged])
 
     useEffect(() => {
         let editor = window.ace.edit("editor");
