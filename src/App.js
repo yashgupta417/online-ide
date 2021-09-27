@@ -47,8 +47,15 @@ function App() {
     setRunning(true)
     const sourceFile = new File([source],`source.${allLanguages[language].extension}`,{type: "text/plain"})
     const inputFile = new File([input],'input.txt',{type: "text/plain"})
-    const outputData = await runCode(language, sourceFile, inputFile)
-    setOutputData(outputData)
+    try {
+      const outputData = await runCode(language, sourceFile, inputFile)
+      setOutputData(outputData)
+    } catch(err) {
+      setOutputData({
+        status: "FAILED",
+        output: ""
+      })
+    }
     setRunning(false)
   }
 
