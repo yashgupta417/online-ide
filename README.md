@@ -1,6 +1,6 @@
 # online-ide
 
-An online IDE named CodeRunner which can be used to run c++ (more languages will be added soon) files. It uses [online-judge](https://github.com/yashgupta417/online-judge) as the backend. 
+An online IDE named CodeRunner which currently supports c++ and python. It uses [online-judge](https://github.com/yashgupta417/online-judge) as the backend. 
 
 Vist [here](https://main.d1uyx33e7avuub.amplifyapp.com/) to use the CodeRunner.
 
@@ -14,6 +14,6 @@ git clone https://github.com/yashgupta417/online-ide
 ```
 2. Run react app
 ```
-npm start
+cd online-ide && npm start
 ```
 
