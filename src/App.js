@@ -18,10 +18,10 @@ function App() {
     //   aceName: "javascript",
     //   extension: "js"
     // },
-    // "python": {
-    //   aceName: "python",
-    //   extension: "py"
-    // },
+    "python": {
+      aceName: "python",
+      extension: "py"
+    },
     "c++": {
       aceName: "c_cpp",
       extension: "cpp"

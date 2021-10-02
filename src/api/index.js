@@ -8,7 +8,7 @@ export async function runCode(language, sourceFile, inputFile) {
     formdata.append("source", sourceFile);
     formdata.append("input", inputFile);
     formdata.append("timeLimit",5)
-    formdata.append("memoryLimit",1000*1000*256)
+    formdata.append("memoryLimit",1000*1000*100)
 
     const headers = {
         "Content-Type": "multipart/form-data"
