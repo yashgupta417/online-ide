@@ -2,6 +2,7 @@
 
 An online IDE named CodeRunner which currently supports c++ and python. It uses [online-judge](https://github.com/yashgupta417/online-judge) as the backend. 
 
+![](https://github.com/yashgupta417/online-ide/blob/main/screenshot.png)
 Vist [here](https://main.d1uyx33e7avuub.amplifyapp.com/) to use the CodeRunner.
 
 Note:
